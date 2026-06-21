@@ -9,12 +9,12 @@ const announceResult = document.querySelector("#result");
 
 answerBtn.forEach((button) => {
     button.addEventListener("click", () => {
-        getResults()
-        console.log(button.textContent)
+        getResults(button)
+        console.log(button.textContent) 
     })
 })
 
-function getResults() {
+function getResults(button) {
     if(button.textContent === selectedQuestion.correctAns) {
         announceResult.textContent = `Correct! Answer is ${selectedQuestion.correctAns}`
     } else { 
