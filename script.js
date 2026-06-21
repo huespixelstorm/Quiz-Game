@@ -1,4 +1,4 @@
-const answerBtn = document
+const answerBtn = document.querySelectorAll(".answerBtn")
 
 const optionOne = document.querySelector("#optionOne");
 const optionTwo = document.querySelector("#optionTwo");
@@ -7,20 +7,20 @@ const optionFour = document.querySelector("#optionFour");
 
 const announceResult = document.querySelector("#result");
 
-optionThree.addEventListener("click", () => {
-    announceResult.textContent = "Correct, 2 x 4 = 8!"
+answerBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+        getResults()
+        console.log(button.textContent)
+    })
 })
 
-optionOne.addEventListener("click", () => {
-    announceResult.textContent = "Wrong answer"
-})
-optionTwo.addEventListener("click", () => {
-    announceResult.textContent = "Wrong answer"
-})
-optionFour.addEventListener("click", () => {
-    announceResult.textContent = "Wrong answer"
-})
-
+function getResults() {
+    if(button.textContent === selectedQuestion.correctAns) {
+        announceResult.textContent = `Correct! Answer is ${selectedQuestion.correctAns}`
+    } else { 
+        announceResult.textContent = `Wrong Answer. It's ${selectedQuestion.correctAns}`
+    }
+}
 
 const mathQ1 = {
     question: "2 x 4 = ?",
