@@ -1,0 +1,44 @@
+body {
+    background-color: #caddef;
+    margin: auto;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+#mainPanel {
+    background-color: aliceblue;
+    min-width: 750px;
+    min-height: 75vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px lightslategray;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* vertical */
+}
+#questionScreen {
+    background-color: #dfeafc;
+    min-width: 650px;
+    min-height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.answerBtn {
+    min-width: 100px;
+    min-height: 50px;
+}
+#start {
+    min-width: 50px;
+    min-height: 25px;
+}

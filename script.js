@@ -23,19 +23,27 @@ function getResults(button) {
 }
 
 const mathQ1 = {
+    theme: "Math",
     question: "2 x 4 = ?",
     choices: ["2", "4", "6", "8"],
     correctAns: "8"
 }
 const mathQ2 = {
+    theme: "Math",
     question: "5 x 5 = ?",
     choices: ["5", "10", "25", "55"],
     correctAns: "25"
 }
+const mathQ3 = {
+    theme: "Math",
+    question: "102 + 29 = ?",
+    choices: ["10229", "131", "2958", "132"],
+    correctAns: "131",
+}
 
 const mathQuestions = [mathQ1, mathQ2]
 
-
+const theme = document.querySelector("#theme");
 const startBtn = document.querySelector("#start");
 
 let selectedQuestion
@@ -49,6 +57,7 @@ startBtn.addEventListener("click", () => {
     optionTwo.textContent = selectedQuestion.choices[1] 
     optionThree.textContent = selectedQuestion.choices[2] 
     optionFour.textContent = selectedQuestion.choices[3] 
+    theme.textContent = `Theme: ${selectedQuestion.theme}`
 })
 
 
