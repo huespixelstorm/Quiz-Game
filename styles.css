@@ -1,5 +1,6 @@
 body {
     background-color: #caddef;
+    font-family: monospace;
     margin: auto;
     padding: 0;
     min-height: 100vh;
@@ -10,10 +11,15 @@ body {
     align-items: center;     /* vertical */
 }
 
+
+h1 {
+    font-size: 48px;
+}
+
 #mainPanel {
     background-color: aliceblue;
-    min-width: 750px;
-    min-height: 75vh;
+    width: 750px;
+    height: 80vh;
     border-radius: 10px;
     box-shadow: 2px 2px lightslategray;
     padding: 5px;
@@ -22,6 +28,11 @@ body {
     flex-direction: column;
     align-items: center;     /* vertical */
 }
+.info {
+    display: flex;
+    gap: 100px;
+}
+
 #questionScreen {
     background-color: #dfeafc;
     min-width: 650px;
@@ -34,11 +45,61 @@ body {
     align-items: center;
     font-weight: bold;
 }
-.answerBtn {
-    min-width: 100px;
-    min-height: 50px;
+#question {
+    font-size: 32px;
 }
+#result {
+    font-size: 24px;
+    color: lightslategray;
+}
+
+
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin: auto;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.answerBtn {
+    width: 350px;
+    height: 100px;
+    background-color: #dfeafc;
+    border: #caddef;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+}
+.answerBtn:hover {
+    transform: translateY(2px);
+    box-shadow: 2px 2px lightslategray;
+}
+.answerBtn:active {
+    transform: translateY(4px);
+    background-color: rgb(175, 199, 224);
+}
+
+
 #start {
-    min-width: 50px;
-    min-height: 25px;
+    margin: auto;
+    min-width: 75px;
+    min-height: 35px;
+
+    background-color: #dfeafc;
+    border: #caddef;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+
+    font-family: monospace;
+}
+#start:hover {
+    transform: translateY(2px);
+    box-shadow: 2px 2px lightslategray;
+}
+#start:active {
+    transform: translateY(4px);
+    background-color: rgb(175, 199, 224);
 }

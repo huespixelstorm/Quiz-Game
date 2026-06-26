@@ -7,6 +7,14 @@ const optionFour = document.querySelector("#optionFour");
 
 const announceResult = document.querySelector("#result");
 
+const score = document.querySelector("#score");
+let scoreCounter = 0
+
+optionOne.disabled = true
+optionTwo.disabled = true
+optionThree.disabled = true
+optionFour.disabled = true
+
 answerBtn.forEach((button) => {
     button.addEventListener("click", () => {
         getResults(button)
@@ -15,8 +23,19 @@ answerBtn.forEach((button) => {
 })
 
 function getResults(button) {
+
+    optionOne.disabled = true
+    optionTwo.disabled = true
+    optionThree.disabled = true
+    optionFour.disabled = true
+
+    startBtn.disabled = false
+    startBtn.textContent = `Next`
+
     if(button.textContent === selectedQuestion.correctAns) {
+        scoreCounter++
         announceResult.textContent = `Correct! Answer is ${selectedQuestion.correctAns}`
+        score.textContent = `Score: ${scoreCounter}`
     } else { 
         announceResult.textContent = `Wrong Answer. It's ${selectedQuestion.correctAns}`
     }
@@ -41,7 +60,7 @@ const mathQ3 = {
     correctAns: "131",
 }
 
-const mathQuestions = [mathQ1, mathQ2]
+const mathQuestions = [mathQ1, mathQ2, mathQ3]
 
 const theme = document.querySelector("#theme");
 const startBtn = document.querySelector("#start");
@@ -49,7 +68,19 @@ const startBtn = document.querySelector("#start");
 let selectedQuestion
 
 startBtn.addEventListener("click", () => {
+
+    optionOne.disabled = false
+    optionTwo.disabled = false
+    optionThree.disabled = false
+    optionFour.disabled = false
     
+    display()
+
+    startBtn.disabled = true
+})
+
+function display() {
+
     selectedQuestion = getQuestion()
 
     question.textContent = selectedQuestion.question
@@ -58,7 +89,8 @@ startBtn.addEventListener("click", () => {
     optionThree.textContent = selectedQuestion.choices[2] 
     optionFour.textContent = selectedQuestion.choices[3] 
     theme.textContent = `Theme: ${selectedQuestion.theme}`
-})
+
+}
 
 
 const question = document.querySelector("#question");
