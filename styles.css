@@ -45,6 +45,9 @@ h1 {
     align-items: center;
     font-weight: bold;
 }
+#questionNo {
+    font-size: 20px;
+}
 #question {
     font-size: 32px;
 }

@@ -79,8 +79,12 @@ startBtn.addEventListener("click", () => {
     startBtn.disabled = true
 })
 
-function display() {
+const questionNo = document.querySelector("#questionNo")
+let questionCounter = 0;
 
+function display() {
+    
+    questionCounter++
     selectedQuestion = getQuestion()
 
     question.textContent = selectedQuestion.question
@@ -88,7 +92,9 @@ function display() {
     optionTwo.textContent = selectedQuestion.choices[1] 
     optionThree.textContent = selectedQuestion.choices[2] 
     optionFour.textContent = selectedQuestion.choices[3] 
+
     theme.textContent = `Theme: ${selectedQuestion.theme}`
+    questionNo.textContent = `Q${questionCounter}`
 
 }
 
