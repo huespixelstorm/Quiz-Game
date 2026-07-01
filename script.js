@@ -69,21 +69,36 @@ let selectedQuestion
 
 startBtn.addEventListener("click", () => {
 
-    optionOne.disabled = false
-    optionTwo.disabled = false
-    optionThree.disabled = false
-    optionFour.disabled = false
+    if (startBtn.textContent === "Reset") {
+        reset()
+    } else {
+        
+        announceResult.textContent = "-"
+
+        optionOne.disabled = false
+        optionTwo.disabled = false
+        optionThree.disabled = false
+        optionFour.disabled = false
     
     display()
 
     startBtn.disabled = true
+    }
 })
 
 const questionNo = document.querySelector("#questionNo")
 let questionCounter = 0;
 
 function display() {
-    
+
+         //  ENDGAME FUNCTION 
+    if (questionCounter === 3) {
+
+        startBtn.disabled = false
+        endGame()
+
+    } else {
+        
     questionCounter++
     selectedQuestion = getQuestion()
 
@@ -96,6 +111,7 @@ function display() {
     theme.textContent = `Theme: ${selectedQuestion.theme}`
     questionNo.textContent = `Q${questionCounter}`
 
+    }
 }
 
 
@@ -103,4 +119,37 @@ const question = document.querySelector("#question");
 
 function getQuestion() {
     return mathQuestions[Math.floor(Math.random() * mathQuestions.length)]
+}
+
+function endGame() {
+
+        optionOne.textContent = "-"
+        optionTwo.textContent = "-"
+        optionThree.textContent = "-"
+        optionFour.textContent = "-"
+
+        question.textContent = `Play Again?`
+
+        announceResult.textContent = `Out of ${questionCounter} questions, you got right ${scoreCounter}.`
+
+        startBtn.textContent = "Reset"  //  RESET //
+}
+
+function reset() {
+
+    optionOne.disabled = true
+    optionTwo.disabled = true
+    optionThree.disabled = true
+    optionFour.disabled = true
+
+    optionOne.textContent = "-"
+    optionTwo.textContent = "-"
+    optionThree.textContent = "-"
+    optionFour.textContent = "-"
+
+    scoreCounter = 0
+    score.textContent = `Score: ${scoreCounter}`
+
+    questionCounter = 0
+    questionNo.textContent = `Q${questionCounter}`
 }
