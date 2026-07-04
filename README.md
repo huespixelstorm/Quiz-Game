@@ -13,6 +13,7 @@ A simple quiz application built using HTML, CSS, and JavaScript.
 * Score tracking.
 * Question Tracker.
 * Usable UI
+* Usable End Screen 
 
 ## Technologies Used
 
@@ -38,7 +39,7 @@ Questions are stored in an array and selected randomly when the quiz starts.
 ## Planned Features
 
 * Multiple categories
-* End screen
+* Improved End screen sequence
 * Randomized question order
 * Improved user interface
 
