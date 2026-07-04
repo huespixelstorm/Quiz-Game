@@ -67,12 +67,22 @@ const startBtn = document.querySelector("#start");
 
 let selectedQuestion
 
-startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", () => {      //  START / NEXT / RESET BTN //
 
     if (startBtn.textContent === "Reset") {
+        endGame()
         reset()
-    } else {
-        
+        return
+    }
+
+    if (questionCounter === 3) {
+        startBtn.textContent = "Reset"
+        return
+
+    } else { 
+
+    if (startBtn.textContent === "Next" || startBtn.textContent === "START") {
+
         announceResult.textContent = "-"
 
         optionOne.disabled = false
@@ -83,6 +93,7 @@ startBtn.addEventListener("click", () => {
     display()
 
     startBtn.disabled = true
+        }
     }
 })
 
@@ -96,7 +107,7 @@ function display() {
 
         startBtn.disabled = false
         endGame()
-
+        return
     } else {
         
     questionCounter++
@@ -152,4 +163,6 @@ function reset() {
 
     questionCounter = 0
     questionNo.textContent = `Q${questionCounter}`
+
+    startBtn.textContent = "START"
 }
