@@ -41,6 +41,7 @@ Questions are stored in an array and selected randomly when the quiz starts.
 * Multiple categories
 * Improved End screen sequence
 * Randomized question order
+* No repeating questions mode
 * Improved user interface
 
 ## Status
