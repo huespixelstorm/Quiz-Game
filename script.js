@@ -81,14 +81,7 @@ const questionNo = document.querySelector("#questionNo")
 let questionCounter = 0;
 
 function display() {
-
-         //  ENDGAME FUNCTION 
-    if (questionCounter === 3) {
-
-        startBtn.disabled = false
-        endGame()
-        return
-    } else {
+{
         
     questionCounter++
     selectedQuestion = getQuestion()
@@ -121,7 +114,7 @@ function endGame() {
 
         question.textContent = `Play Again?`
 
-        announceResult.textContent = `Out of ${questionCounter} questions, you got right ${scoreCounter}.`
+        announceResult.textContent = `Out of ${questionCounter} questions, you got ${scoreCounter} right.`
 
         startBtn.textContent = "Reset"  //  RESET //
 }
