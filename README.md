@@ -47,3 +47,5 @@ Questions are stored in an array and selected randomly when the quiz starts.
 ## Status
 
 Work in progress. This project is being developed as a learning project to practice JavaScript concepts such as DOM manipulation, event listeners, arrays, objects, functions, and application logic.
+
+WIP (put on hold for school and time management reasons, updates will not be made often or soon)
