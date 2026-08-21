@@ -83,9 +83,15 @@ h1 {
     transform: translateY(4px);
     background-color: rgb(175, 199, 224);
 }
+.answerBtn:disabled {
+    cursor: not-allowed;
+}
+.answerBtn.selected {
+    background-color: lightslategray;
+}
 
 
-#start {
+#gamerule {
     margin: auto;
     min-width: 75px;
     min-height: 35px;
@@ -98,11 +104,11 @@ h1 {
 
     font-family: monospace;
 }
-#start:hover {
+#gamerule:hover {
     transform: translateY(2px);
     box-shadow: 2px 2px lightslategray;
 }
-#start:active {
+#gamerule:active {
     transform: translateY(4px);
     background-color: rgb(175, 199, 224);
 }
