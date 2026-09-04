@@ -81,13 +81,16 @@ h1 {
 }
 .answerBtn:active {
     transform: translateY(4px);
-    background-color: rgb(175, 199, 224);
+    background-color: rgb(89, 89, 241);
+    color: whitesmoke;
 }
 .answerBtn:disabled {
     cursor: not-allowed;
 }
+/*Custom pseduo-class */
 .answerBtn.selected {
-    background-color: lightslategray;
+    background-color: rgb(89, 89, 241);
+    color: whitesmoke;
 }
 
 
@@ -110,5 +113,6 @@ h1 {
 }
 #gamerule:active {
     transform: translateY(4px);
-    background-color: rgb(175, 199, 224);
+    background-color: rgb(89, 89, 241);
+    color: whitesmoke;
 }

@@ -1,6 +1,8 @@
-const quizQuestions = [mathQuestions, scienceQuestions, spaceQuestions, programmingQuestions];
 
-const mathQuestions = [{
+
+
+
+const Mathematics = [{
     theme: "Math",
     question: "2 x 4 = ?",
     choices: ["2", "4", "6", "8"],
@@ -68,7 +70,7 @@ const mathQuestions = [{
 }
 ]
 
-const spaceQuestions = [{
+const Space = [{
     theme: "Space",
     question: "What is the name of the star at the center of our solar system?",
     choices: ["The Moon", "The Sun", "Mars", "Earth"],
@@ -99,7 +101,7 @@ const spaceQuestions = [{
     correctAns: "8"
 }];
 
-const programmingQuestions = [{
+const Programming = [{
     theme: "Programming",
     question: "Which language is used to make web pages interactive?",
     choices: ["JavaScript", "HTML", "CSS", "SQL"],
@@ -130,7 +132,7 @@ const programmingQuestions = [{
     correctAns: "*"
 }];
 
-const scienceQuestions = [{
+const Science = [{
     theme: "Science",
     question: "What do humans need to breathe to survive?",
     choices: ["Oxygen", "Helium", "Hydrogen", "Carbon dioxide"],
@@ -160,3 +162,11 @@ const scienceQuestions = [{
     choices: ["Sunlight", "Sound", "Wind", "Gravity"],
     correctAns: "Sunlight"
 }];
+
+
+const questionSets = {
+    Mathematics: Mathematics,
+    Science: Science,
+    Space: Space,
+    Programming: Programming
+};
