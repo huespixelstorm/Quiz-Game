@@ -12,8 +12,9 @@ A simple quiz application built using HTML, CSS, and JavaScript.
 * Uses JavaScript objects and arrays to store quiz data.
 * Score tracking.
 * Question Tracker.
+* Multiple categories
+* Usable End screen sequence (Improved compared to V1)
 * Usable UI
-* Usable End Screen 
 
 ## Technologies Used
 
@@ -38,14 +39,12 @@ Questions are stored in an array and selected randomly when the quiz starts.
 
 ## Planned Features
 
-* Multiple categories
-* Improved End screen sequence
 * Randomized question order
 * No repeating questions mode
 * Improved user interface
 
 ## Status
 
-Work in progress. This project is being developed as a learning project to practice JavaScript concepts such as DOM manipulation, event listeners, arrays, objects, functions, and application logic.
+Version 2
 
-WIP (put on hold for school and time management reasons, updates will not be made often or soon)
+(no significant updates will be made soon as this is a learning project i have likely no changes to be added or made until more have have been learned)
