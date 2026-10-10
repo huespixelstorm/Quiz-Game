@@ -15,6 +15,7 @@ A simple quiz application built using HTML, CSS, and JavaScript.
 * Multiple categories
 * Usable End screen sequence (Improved compared to V1)
 * Usable UI
+* 4 categories up to 15 questions each
 
 ## Technologies Used
 
